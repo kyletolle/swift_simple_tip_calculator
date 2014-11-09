@@ -52,12 +52,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         lblTipCalculated.text = "Tip Total: $\(answerFormat)"
         
-        return true
-    }
-    
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         txtMealCost.resignFirstResponder()
         txtTip.resignFirstResponder()
+        
+        return true
     }
 }
 
