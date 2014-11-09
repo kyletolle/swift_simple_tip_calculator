@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var txtMealCost: UITextField!
     @IBOutlet weak var txtTip: UITextField!
@@ -53,6 +53,11 @@ class ViewController: UIViewController {
         lblTipCalculated.text = "Tip Total: $\(answerFormat)"
         
         return true
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        txtMealCost.resignFirstResponder()
+        txtTip.resignFirstResponder()
     }
 }
 
